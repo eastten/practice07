@@ -1,0 +1,23 @@
+@use '../global';
+
+// 基本設定
+body {
+  font-family: "Robot", sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+figure,
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

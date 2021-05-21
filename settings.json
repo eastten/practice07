@@ -1,0 +1,92 @@
+{
+  /* 個人設定
+  ============================================= */
+  "editor.fontFamily": "Ricty Diminished, Source Han Code JP",
+  "editor.fontSize": 17,
+  "workbench.colorTheme": "Atom One Light",
+  "workbench.iconTheme": "vscode-icons",
+  "explorer.confirmDelete": false,
+  "editor.wordWrap": "on",
+
+  /* 基本設定
+  ============================================= */
+  "emmet.variables": {
+    "lang": "ja"
+  },
+  //"terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+
+  /* FORMATTER and LINTER
+  ============================================= */
+  // javascriptのデフォルトフォーマットを無効に
+  "javascript.format.enable": false,
+
+  // デフォルトフォーマッターをPrettierにする
+  //"editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  //"editor.formatOnPaste": true,
+  //"editor.formatOnType": true,
+
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+
+  // Prettier対象外言語
+  // "prettier.disableLanguages": ["scss"],
+
+  // Linter
+  "editor.codeActionsOnSave": {
+   "source.fixAll.eslint": true,
+   "source.fixAll.stylelint": true
+  },
+
+  /*
+  CODE SPELL CHECKER
+  ============================================= */
+  "cSpell.userWords": [
+    "bango",
+    "browserslist",
+    "crossorigin",
+    "delv",
+    "gifsicle",
+    "gridsome",
+    "gulpfile",
+    "hanako",
+    "hiragino",
+    "hoge",
+    "hogehoge",
+    "ichiyasa",
+    "jiro",
+    "jpegtran",
+    "jsdelivr",
+    "kaku",
+    "lightbox",
+    "meiryo",
+    "midgray",
+    "mincho",
+    "mixins",
+    "myonoffswitch",
+    "nuxt",
+    "nuxtjs",
+    "ohmoto",
+    "onoffswitch",
+    "onofftext",
+    "photoshop",
+    "preconnect",
+    "sachiko",
+    "sawarabi",
+    "sitecss",
+    "stylelint",
+    "swiper",
+    "tabindex",
+    "tailwindcss",
+    "todos",
+    "vite",
+    "vuex",
+    "yamacafe",
+    "yubin",
+    "yubin bango"
+  ],
+  "editor.linkedEditing": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "terminal.integrated.defaultProfile.windows": "Git Bash"
+}
