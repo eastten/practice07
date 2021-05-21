@@ -3,6 +3,15 @@
 // 基本設定
 body {
   font-family: "Robot", sans-serif;
+  color: global.$color-WT;
+  background: transparent
+    linear-gradient(
+      180deg,
+      #{global.$color-PL2} 0%,
+      #{global.$color-PL2} 28%,
+      #{global.$color-BL2} 100%
+    )
+    0% 0% no-repeat padding-box;
 }
 
 body,

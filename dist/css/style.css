@@ -1,5 +1,7 @@
 body {
   font-family: "Robot", sans-serif;
+  color: #fff;
+  background: transparent linear-gradient(180deg, #3a0757 0%, #3a0757 28%, #042230 100%) 0% 0% no-repeat padding-box;
 }
 
 body,
