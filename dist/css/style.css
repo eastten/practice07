@@ -20,3 +20,39 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+main section {
+  padding: 31px 10px 43px;
+  margin: 36px 0;
+  color: #621f82;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+main h2 {
+  margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+}
+
+main h2 + p {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  main section {
+    padding: 58px 50px 70px;
+  }
+
+  main h2 {
+    font-size: 32px;
+    text-align: left;
+  }
+
+  main h2 + p {
+    text-align: left;
+  }
+}
