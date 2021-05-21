@@ -21,6 +21,12 @@ a {
   text-decoration: none;
 }
 
+.ly_cont {
+  width: 92%;
+  max-width: 1214px;
+  margin: 0 auto;
+}
+
 main section {
   padding: 31px 10px 43px;
   margin: 36px 0;
