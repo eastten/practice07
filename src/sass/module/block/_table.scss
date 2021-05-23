@@ -16,6 +16,13 @@
     border-bottom: 1px solid global.$color-GR;
   }
 
+  td:last-child {
+    img {
+      width: 16px;
+      height: auto;
+    }
+  }
+
   thead {
     th {
       border-top: 1px solid global.$color-GR;
@@ -34,6 +41,17 @@
     text-align: left;
     background-color: global.$color-BK;
     box-shadow: 4px 0 4px rgba(black, 0.2);
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      width: 24px;
+      height: auto;
+      padding: 3px 13px 3px 3px;
+    }
   }
 
   th:last-child {

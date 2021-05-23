@@ -64,6 +64,11 @@ main h2 + p {
   border-bottom: 1px solid #d3d3d3;
 }
 
+.table td:last-child img {
+  width: 16px;
+  height: auto;
+}
+
 .table thead th {
   border-top: 1px solid #d3d3d3;
 }
@@ -80,6 +85,17 @@ main h2 + p {
   text-align: left;
   background-color: #282832;
   box-shadow: 4px 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.table th:nth-child(2) a {
+  display: flex;
+  align-items: center;
+}
+
+.table th:nth-child(2) img {
+  width: 24px;
+  height: auto;
+  padding: 3px 13px 3px 3px;
 }
 
 .table th:last-child {
