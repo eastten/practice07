@@ -1,0 +1,9 @@
+@use '../../global';
+
+// テーブル（順位表）
+.table {
+  th,
+  td {
+    border: 1px solid global.$color-GR;
+  }
+}
