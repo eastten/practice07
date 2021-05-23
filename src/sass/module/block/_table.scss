@@ -2,8 +2,51 @@
 
 // テーブル（順位表）
 .table {
+  width: 100%;
+  margin-top: 28px;
+  table-layout: fixed;
+  border-spacing: 0;
+
   th,
   td {
-    border: 1px solid global.$color-GR;
+    padding: 5px 0;
+    font-size: 14px;
+    color: global.$color-BK;
+    text-align: center;
+    border-bottom: 1px solid global.$color-GR;
+  }
+
+  thead {
+    th {
+      border-top: 1px solid global.$color-GR;
+    }
+  }
+
+  th:nth-child(1) {
+    width: 42px;
+    color: global.$color-WT;
+    background-color: global.$color-BK;
+  }
+
+  th:nth-child(2) {
+    width: 150px;
+    color: global.$color-WT;
+    text-align: left;
+    background-color: global.$color-BK;
+    box-shadow: 4px 0 4px rgba(black, 0.2);
+  }
+
+  th:last-child {
+    width: 150px;
+  }
+
+  tbody {
+    th:nth-child(1) {
+      font-weight: normal;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #ddd;
+    }
   }
 }

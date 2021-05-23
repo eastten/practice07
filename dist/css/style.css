@@ -48,9 +48,50 @@ main h2 + p {
   text-align: center;
 }
 
+.table {
+  width: 100%;
+  margin-top: 28px;
+  table-layout: fixed;
+  border-spacing: 0;
+}
+
 .table th,
 .table td {
-  border: 1px solid #d3d3d3;
+  padding: 5px 0;
+  font-size: 14px;
+  color: #282832;
+  text-align: center;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.table thead th {
+  border-top: 1px solid #d3d3d3;
+}
+
+.table th:nth-child(1) {
+  width: 42px;
+  color: #fff;
+  background-color: #282832;
+}
+
+.table th:nth-child(2) {
+  width: 150px;
+  color: #fff;
+  text-align: left;
+  background-color: #282832;
+  box-shadow: 4px 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.table th:last-child {
+  width: 150px;
+}
+
+.table tbody th:nth-child(1) {
+  font-weight: normal;
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: #ddd;
 }
 
 @media (min-width: 768px) {
