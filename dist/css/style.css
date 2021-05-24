@@ -50,7 +50,7 @@ main h2 + p {
 
 .table {
   width: 100%;
-  margin-top: 28px;
+  min-width: 550px;
   table-layout: fixed;
   border-spacing: 0;
 }
@@ -74,13 +74,19 @@ main h2 + p {
 }
 
 .table th:nth-child(1) {
+  position: sticky;
+  left: 0;
   width: 42px;
   color: #fff;
   background-color: #282832;
 }
 
 .table th:nth-child(2) {
+  position: sticky;
+  left: 42px;
+  box-sizing: border-box;
   width: 150px;
+  padding-right: 10px;
   color: #fff;
   text-align: left;
   background-color: #282832;
@@ -110,6 +116,11 @@ main h2 + p {
   background-color: #ddd;
 }
 
+.table-wrapper {
+  margin-top: 28px;
+  overflow: auto;
+}
+
 @media (min-width: 768px) {
   main section {
     padding: 58px 50px 70px;
@@ -122,5 +133,22 @@ main h2 + p {
 
   main h2 + p {
     text-align: left;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .table th,
+  .table td {
+    font-size: 13px;
+  }
+
+  .table thead span {
+    height: 48px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+  }
+
+  .table th:nth-child(2) {
+    width: 120px;
   }
 }

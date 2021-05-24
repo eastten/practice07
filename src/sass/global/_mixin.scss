@@ -3,6 +3,7 @@
 $breakpoints: (
   pc: "(min-width: 768px)",
   tb: "(min-width: 768px) and (max-width: 1023px)",
+  mb: "(max-width: 899px)",
 );
 
 @mixin mq($breakpoint) {
