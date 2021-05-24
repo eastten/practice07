@@ -1,6 +1,7 @@
 @use '../../global';
 
 .footer {
+  position: relative;
   margin-top: 80px;
   margin-bottom: 80px;
 
@@ -100,5 +101,21 @@
   .teamLogo {
     font-size: 14px;
     line-height: 1.5;
+  }
+}
+
+.footer-deco {
+  position: absolute;
+  top: -89px;
+  right: -149px;
+  z-index: -1;
+  width: 406px;
+  height: auto;
+  opacity: 0.22;
+  transform: rotate(-56deg);
+
+  @include global.mq(pc) {
+    top: -138px;
+    right: -112px;
   }
 }

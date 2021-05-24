@@ -1,3 +1,8 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Robot", sans-serif;
   color: #fff;
@@ -173,6 +178,7 @@ main h2 + p {
 }
 
 .footer {
+  position: relative;
   margin-top: 80px;
   margin-bottom: 80px;
 }
@@ -240,6 +246,17 @@ main h2 + p {
 .attribution .teamLogo {
   font-size: 14px;
   line-height: 1.5;
+}
+
+.footer-deco {
+  position: absolute;
+  top: -89px;
+  right: -149px;
+  z-index: -1;
+  width: 406px;
+  height: auto;
+  opacity: 0.22;
+  transform: rotate(-56deg);
 }
 
 @media (min-width: 768px) {
@@ -312,6 +329,11 @@ main h2 + p {
 
   .attribution .copyright {
     margin-bottom: 0;
+  }
+
+  .footer-deco {
+    top: -138px;
+    right: -112px;
   }
 }
 

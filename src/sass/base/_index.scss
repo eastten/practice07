@@ -1,6 +1,11 @@
 @use '../global';
 
 // 基本設定
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Robot", sans-serif;
   color: global.$color-WT;
