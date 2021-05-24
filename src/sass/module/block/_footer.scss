@@ -1,7 +1,8 @@
 @use '../../global';
 
 .footer {
-  margin: 80px 0;
+  margin-top: 80px;
+  margin-bottom: 80px;
 
   @include global.mq(pc) {
     margin-top: 120px;
@@ -47,5 +48,22 @@
     @include global.mq(pc) {
       margin-bottom: 7px;
     }
+  }
+}
+
+.menu-sns {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: -20px;
+  }
+
+  img {
+    width: 35px;
+    height: auto;
+    margin-right: 33px;
+    margin-bottom: 20px;
+    opacity: 0.8;
   }
 }
