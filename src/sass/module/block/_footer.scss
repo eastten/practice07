@@ -67,3 +67,38 @@
     opacity: 0.8;
   }
 }
+
+.attribution {
+  @include global.mq(pc) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .site {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+
+    img {
+      width: 32px;
+      height: auto;
+      margin-right: 16px;
+    }
+  }
+
+  .copyright {
+    margin-top: 16px;
+    margin-bottom: 42px;
+    font-size: 14px;
+
+    @include global.mq(pc) {
+      margin-bottom: 0;
+    }
+  }
+
+  .teamLogo {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}

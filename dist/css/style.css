@@ -218,6 +218,30 @@ main h2 + p {
   opacity: 0.8;
 }
 
+.attribution .site {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.attribution .site img {
+  width: 32px;
+  height: auto;
+  margin-right: 16px;
+}
+
+.attribution .copyright {
+  margin-top: 16px;
+  margin-bottom: 42px;
+  font-size: 14px;
+}
+
+.attribution .teamLogo {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 @media (min-width: 768px) {
   main section {
     padding: 58px 50px 70px;
@@ -279,6 +303,15 @@ main h2 + p {
 
   .menu-text li:not(:last-child) {
     margin-bottom: 7px;
+  }
+
+  .attribution {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .attribution .copyright {
+    margin-bottom: 0;
   }
 }
 
