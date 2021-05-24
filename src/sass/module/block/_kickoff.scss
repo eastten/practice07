@@ -10,15 +10,28 @@
   .date {
     font-size: 11px;
     font-weight: bold;
+
+    @include global.mq(pc-large) {
+      font-size: 15px;
+    }
   }
 
   .time {
     margin-bottom: 5px;
     font-size: 20px;
     font-weight: bold;
+
+    @include global.mq(pc-large) {
+      margin-bottom: 16px;
+      font-size: 32px;
+    }
   }
 
   .timezone {
     font-size: 10px;
+
+    @include global.mq(pc-large) {
+      font-size: 16px;
+    }
   }
 }

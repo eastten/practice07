@@ -1,13 +1,40 @@
 @use '../../global';
 
 // 対戦カード
+.teams {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 45px;
+
+  @include global.mq(pc) {
+    padding: 0 50px;
+    margin-top: 23px;
+    background-image: url(../img/img/logo-blue.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 38px;
+  }
+}
+
 .team {
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
+  align-self: flex-start;
+  margin: 0 10px;
   font-size: 16px;
   color: global.$color-BL;
   text-align: center;
+
+  @include global.mq(pc) {
+    margin: 0;
+  }
+
+  @include global.mq(pc-large) {
+    font-size: 24px;
+  }
 
   img {
     box-sizing: border-box;
@@ -17,5 +44,37 @@
     margin-bottom: 8px;
     background-color: global.$color-BL;
     border-radius: 50%;
+
+    @include global.mq(pc-large) {
+      width: 169px;
+      height: 169px;
+      padding: 13px;
+    }
+  }
+
+  &.home {
+    @include global.mq(pc) {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+
+    img {
+      @include global.mq(pc) {
+        margin: 0 percentage(43 / 460) 0 percentage(43 / 460);
+      }
+    }
+  }
+
+  &.away {
+    @include global.mq(pc) {
+      flex-direction: row;
+      text-align: left;
+    }
+
+    img {
+      @include global.mq(pc) {
+        margin: 0 percentage(43 / 460) 0 percentage(43 / 460);
+      }
+    }
   }
 }

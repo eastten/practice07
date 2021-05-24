@@ -48,10 +48,20 @@ main h2 + p {
   text-align: center;
 }
 
+.teams {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 45px;
+}
+
 .team {
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
+  align-self: flex-start;
+  margin: 0 10px;
   font-size: 16px;
   color: #0b5578;
   text-align: center;
@@ -175,6 +185,37 @@ main h2 + p {
   main h2 + p {
     text-align: left;
   }
+
+  .teams {
+    padding: 0 50px;
+    margin-top: 23px;
+    background-image: url(../img/img/logo-blue.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 38px;
+  }
+
+  .team {
+    margin: 0;
+  }
+
+  .team.home {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+
+  .team.home img {
+    margin: 0 9.347826087% 0 9.347826087%;
+  }
+
+  .team.away {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .team.away img {
+    margin: 0 9.347826087% 0 9.347826087%;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -191,5 +232,30 @@ main h2 + p {
 
   .table th:nth-child(2) {
     width: 120px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .team {
+    font-size: 24px;
+  }
+
+  .team img {
+    width: 169px;
+    height: 169px;
+    padding: 13px;
+  }
+
+  .kickoff .date {
+    font-size: 15px;
+  }
+
+  .kickoff .time {
+    margin-bottom: 16px;
+    font-size: 32px;
+  }
+
+  .kickoff .timezone {
+    font-size: 16px;
   }
 }
