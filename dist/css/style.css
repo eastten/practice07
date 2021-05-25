@@ -34,7 +34,50 @@ a {
 
 .hero {
   position: relative;
+  display: flex;
+  align-items: center;
   height: 882px;
+}
+
+.hero figure img {
+  display: block;
+  width: 151px;
+  height: auto;
+  margin: 0 auto 35px;
+}
+
+.hero .title01 {
+  display: block;
+  font-size: 38px;
+  font-weight: 400;
+}
+
+.hero .title02 {
+  display: block;
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.hero .title03 {
+  display: block;
+  font-size: 98px;
+  font-weight: 900;
+}
+
+.hero .title03 img {
+  width: 40px;
+  margin-left: 45px;
+}
+
+.hero p {
+  margin-top: 18px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.hero .txt {
+  width: 313px;
+  margin: auto;
 }
 
 .hero-placeholder,
@@ -64,6 +107,11 @@ a {
   content: "";
   background-color: #000;
   opacity: 0.5;
+}
+
+.hero-main {
+  -webkit-animation: hero-main 3s ease-in-out 1s backwards;
+  animation: hero-main 3s ease-in-out 1s backwards;
 }
 
 main section {
@@ -294,6 +342,49 @@ main h2 + p {
 }
 
 @media (min-width: 768px) {
+  .hero figure img {
+    width: 330px;
+    max-width: 70%;
+    margin-bottom: 0;
+  }
+
+  .hero .title01 {
+    font-size: 60px;
+  }
+
+  .hero .title02 {
+    font-size: 75px;
+  }
+
+  .hero .title03 {
+    margin-top: -17px;
+    font-size: 153px;
+  }
+
+  .hero .title03 img {
+    width: 62px;
+    margin-left: 72px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .hero .txt {
+    width: auto;
+    padding-left: 50px;
+  }
+
+  .contents {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .contents > * {
+    flex: 1;
+  }
+
   main section {
     padding: 58px 50px 70px;
   }
@@ -410,5 +501,25 @@ main h2 + p {
 
   .kickoff .timezone {
     font-size: 16px;
+  }
+}
+
+@-webkit-keyframes hero-main {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hero-main {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

@@ -1,6 +1,98 @@
+@use '../../global';
+
 .hero {
   position: relative;
+  display: flex;
+  align-items: center;
   height: 882px;
+
+  figure img {
+    display: block;
+    width: 151px;
+    height: auto;
+    margin: 0 auto 35px;
+
+    @include global.mq(pc) {
+      width: 330px;
+      max-width: 70%;
+      margin-bottom: 0;
+    }
+  }
+
+  .title01 {
+    display: block;
+    font-size: 38px;
+    font-weight: 400;
+
+    @include global.mq(pc) {
+      font-size: 60px;
+    }
+  }
+
+  .title02 {
+    display: block;
+    font-size: 48px;
+    font-weight: 900;
+
+    @include global.mq(pc) {
+      font-size: 75px;
+    }
+  }
+
+  .title03 {
+    display: block;
+    font-size: 98px;
+    font-weight: 900;
+
+    @include global.mq(pc) {
+      margin-top: -17px;
+      font-size: 153px;
+    }
+
+    img {
+      width: 40px;
+      margin-left: 45px;
+
+      @include global.mq(pc) {
+        width: 62px;
+        margin-left: 72px;
+      }
+    }
+  }
+
+  p {
+    margin-top: 18px;
+    font-size: 12px;
+    line-height: 1.8;
+
+    @include global.mq(pc) {
+      font-size: 18px;
+    }
+  }
+
+  .txt {
+    width: 313px;
+    margin: auto;
+
+    @include global.mq(pc) {
+      width: auto;
+      padding-left: 50px;
+    }
+  }
+}
+
+.contents {
+  @include global.mq(pc) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  > * {
+    @include global.mq(pc) {
+      flex: 1;
+    }
+  }
 }
 
 .hero-placeholder,
@@ -32,4 +124,18 @@
   content: "";
   background-color: #000;
   opacity: 0.5;
+}
+
+.hero-main {
+  animation: hero-main 3s ease-in-out 1s backwards;
+}
+
+@keyframes hero-main {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
