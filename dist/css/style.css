@@ -26,10 +26,160 @@ a {
   text-decoration: none;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
 .ly_cont {
   width: 92%;
   max-width: 1214px;
   margin: 0 auto;
+}
+
+.header {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid #fff;
+}
+
+.header .ly_cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 98px;
+}
+
+.header .site {
+  display: flex;
+  align-items: center;
+  font-size: 21px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.header .site img {
+  width: 24px;
+  height: auto;
+  margin-right: 12px;
+  opacity: 0.8;
+}
+
+.navBtn {
+  z-index: 200;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.navBtn-bar {
+  position: relative;
+  display: block;
+  width: 32px;
+  height: 3px;
+  color: #fff;
+  background-color: currentColor;
+  opacity: 0.8;
+  transition: background-color 0.5s;
+}
+
+.navBtn-bar::before,
+.navBtn-bar::after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: currentColor;
+  transition: transform 0.5s;
+}
+
+.navBtn-bar::before {
+  transform: translateY(-10px);
+}
+
+.navBtn-bar::after {
+  transform: translateY(10px);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  padding-top: 98px;
+  text-align: center;
+  pointer-events: none;
+  background-color: rgba(4, 34, 48, 0.9);
+  opacity: 0;
+}
+
+.open .nav {
+  pointer-events: auto;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+html.open,
+.open body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.nav-menu a {
+  display: block;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-top: 1px solid #eee;
+}
+
+.nav-menu li:last-child a {
+  border-bottom: 1px solid #eee;
+}
+
+.nav-menu span {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.nav-sns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.nav-sns li {
+  margin: 30px 10px 0;
+}
+
+.open .navBtn-bar {
+  background-color: transparent;
+}
+
+.open .navBtn-bar::before {
+  transform: translateY(0) rotate(225deg);
+}
+
+.open .navBtn-bar::after {
+  transform: translateY(0) rotate(-225deg);
 }
 
 .hero {
@@ -357,6 +507,15 @@ main h2 + p {
 }
 
 @media (min-width: 768px) {
+  .header .site {
+    font-size: 28px;
+  }
+
+  .header .site img {
+    width: 32px;
+    margin-right: 16px;
+  }
+
   .hero figure img {
     width: 330px;
     max-width: 70%;
