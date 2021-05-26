@@ -114,6 +114,21 @@ a {
   animation: hero-main 3s ease-in-out 1s backwards;
 }
 
+.title01,
+.title02,
+.title03 {
+  height: 1.3em;
+  overflow: hidden;
+}
+
+.title01 > span,
+.title02 > span,
+.title03 > span {
+  display: block;
+  -webkit-animation: 1s title ease-in-out;
+  animation: 1s title ease-in-out;
+}
+
 main section {
   padding: 31px 10px 43px;
   margin: 36px 0;
@@ -521,5 +536,25 @@ main h2 + p {
 
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes title {
+  0% {
+    transform: translateY(1.3em);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes title {
+  0% {
+    transform: translateY(1.3em);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
